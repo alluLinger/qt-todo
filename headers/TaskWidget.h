@@ -46,6 +46,8 @@ private slots:
      */
     void on_clicked();
 
+    void on_double_clicked();
+
 public:
     TaskWidget(Task * task, QWidget * parent = nullptr);
 };

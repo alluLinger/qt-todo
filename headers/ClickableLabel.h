@@ -13,6 +13,7 @@
 #include <iostream>
 
 #include <QLabel>
+#include <QMouseEvent>
 
 class ClickableLabel : public QLabel {
 
@@ -27,10 +28,17 @@ public:
 
 signals:
     void released();
+    void doubleClicked();
 
 protected:
     virtual void mouseReleaseEvent(QMouseEvent* event) {
         emit released();
+    }
+
+    virtual void mouseDoubleClickEvent(QMouseEvent *event) {
+           if(event->button() == Qt::LeftButton) {
+               emit doubleClicked();
+           }
     }
 
 };

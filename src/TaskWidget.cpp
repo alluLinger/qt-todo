@@ -23,11 +23,16 @@ TaskWidget::TaskWidget(Task * task, QWidget * parent):
         this, SLOT(on_clicked()));
     connect(task_label, SIGNAL(released()),
         this, SLOT(on_clicked()));
+    connect(task_label, SIGNAL(doubleClicked()),
+        this, SLOT(on_double_clicked()));
 
     check_box->setChecked(task->is_complete());
     update_text();
 }
 
+void TaskWidget::on_double_clicked() {
+
+}
 
 void TaskWidget::update_text() {
 
@@ -86,4 +91,3 @@ void TaskWidget::on_clicked() {
 }
 
 } // qttodo
-

@@ -33,11 +33,14 @@ private slots:
      */
     void on_task_name_field_textChanged();
 
+    void on_task_name_field_returnPressed();
+
 signals:
     void task_created(Task task);
 
 public:
     AddTaskWidget(QWidget * parent = nullptr);
+    void add_task();
 
 };
 

@@ -16,6 +16,9 @@
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
     <widget class="QCheckBox" name="check_box">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="text">
       <string/>
      </property>
@@ -23,6 +26,9 @@
    </item>
    <item>
     <widget class="ClickableLabel" name="task_label">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="text">
       <string/>
      </property>
@@ -43,6 +49,9 @@
    </item>
    <item>
     <widget class="QLabel" name="date_label">
+     <property name="cursor">
+      <cursorShape>ArrowCursor</cursorShape>
+     </property>
      <property name="text">
       <string/>
      </property>

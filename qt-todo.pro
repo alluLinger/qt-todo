@@ -8,7 +8,6 @@ DEPENDPATH += . src ui headers
 INCLUDEPATH += . headers headers_ui
 UI_DIR = headers_ui
 MOC_DIR = build
-
 # Put object files in the build directory
 OBJECTS_DIR = ./build
 

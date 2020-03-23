@@ -29,9 +29,7 @@ AddTaskWidget::AddTaskWidget(QWidget * parent):
 }
 
 // SLOTS
-
-void AddTaskWidget::on_add_button_clicked() {
-
+void AddTaskWidget::add_task() {
     QDate selected_date = task_date_editor->date();
 
     Task task(
@@ -41,13 +39,22 @@ void AddTaskWidget::on_add_button_clicked() {
 
     task_name_field->setText("");
     task_date_editor->setDate(to_qdate(Date()));
-    
+
     emit task_created(task);
 }
 
-void AddTaskWidget::on_task_name_field_textChanged() {
+void AddTaskWidget::on_add_button_clicked() {
+    add_task();
+}
 
+void AddTaskWidget::on_task_name_field_textChanged() {
     add_button->setEnabled(task_name_field->hasAcceptableInput());
 }
 
 } // qttodo
+
+void qttodo::AddTaskWidget::on_task_name_field_returnPressed() {
+    add_task();
+}
+
+

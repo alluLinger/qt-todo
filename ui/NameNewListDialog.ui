@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>270</width>
-    <height>120</height>
+    <width>373</width>
+    <height>121</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -42,6 +42,9 @@
    </item>
    <item>
     <widget class="QDialogButtonBox" name="button_box">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="standardButtons">
       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
      </property>
